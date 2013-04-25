@@ -46,6 +46,18 @@ In v.0.1 you have to find your own content delivery service in order to use this
 
 Sorry not right now. But if you find this is really what you need please make a feature request.
 
+= Is Flowplayer free to use for my website? =
+
+Yes. Flowplayer is an open-source software and is absolutely free to use. However, the free version of Flowplayer bears a Flowplayer logo on the video. In order to remove that logo you have to purchase a Flowplayer license key (see next question).
+
+= How can I remove the Flowplayer logo on the video? =
+
+You need to purchase a [Flowplayer license key](http://flash.flowplayer.org/download/) and register that key for your Wordpress site. Then go to the Configuration page of the Flowplayer Playlist plugin and save the key. The key you purchased can only be used for the website you registered (including subdomains) on the Flowplayer website so don't worry that someone else might steal your key. Make sure to purchase the key for the Flash-based rather than the HTML5 version of Flowplayer.
+
+= Does this plugin support iPad and iPhone? =
+
+No. This plugin is Flash-based which is not supported by iOS devices. But future releases might add support for iOS devices.
+
 == Screenshots ==
 
 1. https://dl.dropboxusercontent.com/u/7783459/flplaylist/screenshots/001.png
@@ -57,12 +69,10 @@ Sorry not right now. But if you find this is really what you need please make a 
 
 = 0.1 =
 
-First stable release
+First stable release. Features list:
 
-== Upgrade notice ==
-
-
-
-== Arbitrary section 1 ==
-
+* Video playlist post type
+* Embed playlist with short code
+* Provide Flowplayer license key to use the commercial player without logo
+* Supports multisites. License specified in subdomain will override that in the main blog.
 
