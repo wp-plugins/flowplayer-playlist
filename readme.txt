@@ -1,7 +1,9 @@
 === Flowplayer Playlist ===
 
 Contributors: eye8
-Donate link: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LT8MH5R8SGGMU
+Plugin URI: http://eye8.me/flplaylist
+Author URI: http://eye8.me
 Tags: video, Flowplayer, playlist
 Requires at least: 3.2
 Tested up to: 3.5.1
@@ -46,23 +48,32 @@ In v.0.1 you have to find your own content delivery service in order to use this
 
 Sorry not right now. But if you find this is really what you need please make a feature request.
 
+= Is Flowplayer free to use for my website? =
+
+Yes. Flowplayer is an open-source software and is absolutely free to use. However, the free version of Flowplayer bears a Flowplayer logo on the video. In order to remove that logo you have to purchase a Flowplayer license key (see next question).
+
+= How can I remove the Flowplayer logo on the video? =
+
+You need to purchase a [Flowplayer license key](http://flash.flowplayer.org/download/) and register that key for your Wordpress site. Then go to the Configuration page of the Flowplayer Playlist plugin and save the key. The key you purchased can only be used for the website you registered (including subdomains) on the Flowplayer website so don't worry that someone else might steal your key. Make sure to purchase the key for the Flash-based rather than the HTML5 version of Flowplayer.
+
+= Does this plugin support iPad and iPhone? =
+
+No. This plugin is Flash-based which is not supported by iOS devices. But future releases might add support for iOS devices.
+
 == Screenshots ==
 
-1. https://dl.dropboxusercontent.com/u/7783459/flplaylist/screenshots/001.png
-2. https://dl.dropboxusercontent.com/u/7783459/flplaylist/screenshots/002.png
-3. https://dl.dropboxusercontent.com/u/7783459/flplaylist/screenshots/003.png
-4. https://dl.dropboxusercontent.com/u/7783459/flplaylist/screenshots/004.png
+1. Each playlist is a custom post type. Create as many playlists as you like. 
+2. Customize each playlist by specifying width, height, autoplay, and autobuffering. Add as many videos as you like, each URL in a new line. Update the videos whenever you need to.
+3. Save your Flowplayer license key to use the commercial player without the Flowplayer logo. Only one license key is needed for all multisites under the same root domain.
 
 == Changelog ==
 
 = 0.1 =
 
-First stable release
+First stable release. Features list:
 
-== Upgrade notice ==
-
-
-
-== Arbitrary section 1 ==
-
+* Video playlist post type
+* Embed playlist with short code
+* Provide Flowplayer license key to use the commercial player without logo
+* Supports multisites. License specified in subdomain will override that in the main blog.
 
