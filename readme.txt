@@ -7,7 +7,7 @@ Author URI: http://eye8.me
 Tags: video, Flowplayer, playlist
 Requires at least: 3.2
 Tested up to: 3.5.1
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,13 +19,13 @@ Flowplayer Playlist is a free plugin to embed video playlist in WordPress.
 
 * Uses the open-source web video player Flowplayer (latest Flash-based version). Flowplayer package is upgradable when a new version is available.
 * Supports FLV, MP4, and F4V video formats (all those supported by Flowplayer).
+* Mix up Youtube videos with regular videos in the same playlist.
 * Provide your Flowlayer license to use the Flowplayer commercial version. If no license key is provided, it will use the free version bearing the Flowplayer trademark.
 * Flowplayer license supports multisite. Subdomains automatically inherit the license key from the main blog (if any). License key specified in the subdomain will overwrite the key from the main blog, allowing flexibility in larger WordPress blog network.
 
 Right now you have to upload your videos to somewhere over the web with public access (e.g. the 'Public' folder in your Dropbox account) and use the public URLs to embed. But I am considering future features such as integrating the media library in WordPress or a Content Delivery Network (CDN) such as Dropbox or Box.net. Some other features in consideration:
 
 * More Flowplayer configuration parameters such as background color, controlbar color, splash image, custom branding.
-* Supports Youtube videos using the Youtube Player API.
 * Advertisement mode (repeated playback without controlbar).
 
 Please make feature requests in the support section. I will decide which ones to implement first based the feedback.
@@ -67,6 +67,11 @@ No. This plugin is Flash-based which is not supported by iOS devices. But future
 3. Save your Flowplayer license key to use the commercial player without the Flowplayer logo. Only one license key is needed for all multisites under the same root domain.
 
 == Changelog ==
+
+= 0.2 =
+
+* Mix up Youtube videos with progressive download videos
+* Playlist prev/next controls in Flowplayer
 
 = 0.1 =
 

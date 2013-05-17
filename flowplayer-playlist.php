@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Flowplayer Playlist
-Plugin URI: https://example.com
+Plugin URI: http://eye8.me/flplaylist
 Description: Embed Flash video in Wordpress using Flowplayer v.3 (Flash).
 Version: 0.1
 Author: Eye8
-Author URI: http://example.com
+Author URI: http://eye8.me
 
 Copyright (C) 2013 Eye8
 

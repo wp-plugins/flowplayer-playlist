@@ -7,6 +7,7 @@ class Flowplayer extends Plugin {
 	const FLOWPLAYER_SCRIPT_PATH = 'flowplayer/flowplayer-3.2.12.min.js';
 	const FLOWPLAYER_SWF_PATH = 'flowplayer/flowplayer-3.2.16.swf';
 	const FLOWPLAYER_COMMERCIAL_SWF_PATH = 'flowplayer/flowplayer.commercial-3.2.16.swf';
+	const FLOWPLAYER_YOUTUBE_PLUGIN_PATH = 'flowplayer/edlab.youtube-1.1.swf';
 
 
 	public function bind(){
@@ -63,11 +64,49 @@ class Flowplayer extends Plugin {
 					autoBuffering: <?php echo $options['autoBuffering'] ? 1 : 0; ?>,
 				},
 				playlist: [
+				
 				<?php
-					foreach( $options['playlist'] as $vid )
-						echo '"' . $vid . '",';
+					
+					$i = 0;
+					
+					foreach( $options['playlist'] as $vid ) {
 				?>
-				]
+				
+					{
+						
+				<?php
+						if( 'youtube' === self::check_video_provider( $vid ) ) {
+				?>
+						provider: "youtube",
+						scaling: "scale",
+						url: "<?php echo self::get_youtube_video_id( $vid ); ?>",
+				<?php		
+						} else {
+						
+							echo 'url: "' . $vid . '",';
+						
+						}
+						
+						if( 0 != $i ) // autoPlay all clips except the first clip
+							echo 'autoPlay: 1';
+						
+						$i++;
+				?>
+				
+					},
+					
+				<?php
+					} // end FOREACH
+				?>
+				],
+				plugins: {
+					youtube: { 
+						url: "<?php echo plugin_dir_url( __FILE__ ).self::FLOWPLAYER_YOUTUBE_PLUGIN_PATH; ?>" 
+					},
+					controls: {
+						playlist: true
+					}
+				}
 				
 			});
 			
@@ -85,5 +124,19 @@ class Flowplayer extends Plugin {
 		
 	}
 	
+	function get_youtube_video_id( $vurl ){
+		parse_str( parse_url( $vurl, PHP_URL_QUERY ), $parsed_url );
+		return "api:" . $parsed_url['v'];
+	}
+	
+	function check_video_provider( $vurl ){
+		$pattern = '/^http:\/\/(?:www\.)?youtube.com\/watch\?(?=.*v=\w+)(?:\S+)?$/';
+		preg_match( $pattern, $vurl, $matches, PREG_OFFSET_CAPTURE );
+		if( count( $matches )>0 )
+			return "youtube";
+		else {
+			return "http";
+		}
+	}
 	
 }
