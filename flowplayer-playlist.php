@@ -3,7 +3,7 @@
 Plugin Name: Flowplayer Playlist
 Plugin URI: http://eye8.me/flplaylist
 Description: Embed Flash video in Wordpress using Flowplayer v.3 (Flash).
-Version: 0.1
+Version: 0.2
 Author: Eye8
 Author URI: http://eye8.me
 
