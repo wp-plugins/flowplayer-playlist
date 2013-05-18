@@ -37,6 +37,8 @@ class Flowplayer extends Plugin {
 		}
 		$use_commercial = empty( $flowplayer_key ) ? FALSE : TRUE;
 		
+		$autoBuffering = $options['autoBuffering'] ? 1 : 0;
+		
 		ob_start();
 ?>
 
@@ -61,7 +63,6 @@ class Flowplayer extends Plugin {
 			?>
 				clip: {
 					autoPlay: <?php echo $options['autoPlay'] ? 1 : 0; ?>,
-					autoBuffering: <?php echo $options['autoBuffering'] ? 1 : 0; ?>,
 				},
 				playlist: [
 				
@@ -80,10 +81,12 @@ class Flowplayer extends Plugin {
 						provider: "youtube",
 						scaling: "scale",
 						url: "<?php echo self::get_youtube_video_id( $vid ); ?>",
+						autoBuffering: 0,
 				<?php		
 						} else {
 						
 							echo 'url: "' . $vid . '",';
+							echo 'autoBuffering: ' . $autoBuffering . ',';
 						
 						}
 						

@@ -4,7 +4,7 @@ Contributors: eye8
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LT8MH5R8SGGMU
 Plugin URI: http://eye8.me/flplaylist
 Author URI: http://eye8.me
-Tags: video, Flowplayer, playlist
+Tags: video, Flowplayer, Youtube, playlist
 Requires at least: 3.2
 Tested up to: 3.5.1
 Stable tag: 0.2
@@ -65,6 +65,8 @@ No. This plugin is Flash-based which is not supported by iOS devices. But future
 1. Each playlist is a custom post type. Create as many playlists as you like. 
 2. Customize each playlist by specifying width, height, autoplay, and autobuffering. Add as many videos as you like (you can use Youtube videos!), each URL in a new line. Update the videos whenever you need to.
 3. Save your Flowplayer license key to use the commercial player without the Flowplayer logo. Only one license key is needed for all multisites under the same root domain.
+4. Use a simple shortcode to embed the playlist in any post or page.
+5. Both Youtube and progressive download videos are supported.
 
 == Changelog ==
 
