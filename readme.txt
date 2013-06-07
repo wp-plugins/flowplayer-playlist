@@ -7,7 +7,7 @@ Author URI: http://eye8.me
 Tags: video, Flowplayer, Youtube, playlist
 Requires at least: 3.2
 Tested up to: 3.5.1
-Stable tag: 0.2
+Stable tag: 0.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,10 @@ No. This plugin is Flash-based which is not supported by iOS devices. But future
 5. Both Youtube and progressive download videos are supported.
 
 == Changelog ==
+
+= 0.25 =
+
+* Fixed seeking bugs in Youtube plugin
 
 = 0.2 =
 
