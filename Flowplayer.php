@@ -7,7 +7,7 @@ class Flowplayer extends Plugin {
 	const FLOWPLAYER_SCRIPT_PATH = 'flowplayer/flowplayer-3.2.12.min.js';
 	const FLOWPLAYER_SWF_PATH = 'flowplayer/flowplayer-3.2.16.swf';
 	const FLOWPLAYER_COMMERCIAL_SWF_PATH = 'flowplayer/flowplayer.commercial-3.2.16.swf';
-	const FLOWPLAYER_YOUTUBE_PLUGIN_PATH = 'flowplayer/edlab.youtube-1.1.swf';
+	const FLOWPLAYER_YOUTUBE_PLUGIN_PATH = 'flowplayer/edlab.youtube-1.2.swf';
 
 
 	public function bind(){
